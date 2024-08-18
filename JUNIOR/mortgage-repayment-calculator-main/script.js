@@ -59,7 +59,6 @@ inputs.set(2, c2);
 for (let i = 0; i < 3; i++) {
     onfocus(inputs, i);
     onblur(inputs, i);
-    onerror(inputs, i);
 }
     
 
