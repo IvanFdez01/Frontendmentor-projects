@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link rel="stylesheet" href="./general.css">
+    <link rel="stylesheet" href="./left.css">
+    <link rel="stylesheet" href="./right.css">
+
+    <!-- Font Plus Jakarta Sans-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+
+    <title>Frontend Mentor | Mortgage repayment calculator</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution { font-size: 11px; text-align: center; color: hsl(202, 55%, 16%)}
+      .attribution a { color: hsl(61, 70%, 47%); }
+    </style>
+  </head>
+  <body>
+
+    <main class="card rounded">
+      <section class="left rounded">
+        <!-- ========== ROW 1 ========== -->
+        <div class="row-l1">
+          <p class="title">Mortgage calculator</p>
+          <p id = "clearall" class="clearall header">Clear all</p>
+        </div>
+        <!-- ========== ROW 2 ========== -->
+        <div class="row-l2">
+
+          <p class="amount-title header">
+            Mortgage Amount
+          </p>
+
+          <div class="am-input-container">
+            <p id = "GBP" class="GBP icon">&pound;</p>
+            <input type="text" id = "am-input" class = "am-input input">
+            <p id = "error1" class="errormsg">This field is required</p>
+          </div>
+
+        </div>
+        <!-- ========== ROW 3 ========== -->
+        <div class="row-l3">
+          <div>
+            <p class="term header">
+              Mortgage Term
+            </p>
+
+            <div class="term-container">
+              <p id = "years" class="years icon">years</p>
+              <input type="text" id = "term-input" class="term-input input">
+              <p id = "error2" class="errormsg">This field is required</p>
+            </div>
+          </div>
+
+          <div>
+            <p class="interest header">
+              Interest Rate
+            </p>
+            <div class="interest-container">
+              <p id = "percentage" class="percentage icon">&#x25;</p>
+              <input type="text" id = "interest-input" class="interest-input input">
+              <p id = "error3" class="errormsg">This field is required</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ========== ROW 4 ========== -->
+        <div class="row-l4">
+          <p class="type header">
+            Mortgage Type
+          </p>  
+          <div class="type-container">
+            <button id = "repayment-button" class = "type-button input">
+              <input type = "radio" id = "repayment-check" class="type-input">
+              <p class = "repayment">Repayment</p>
+            </button>
+            <button id = "interestonly-button" class = "type-button input">
+              <input type = "radio" id = "interestonly-check" class="type-input">
+              <p class = "interestonly">Interest Only</p>
+            </button>
+          </div>
+        </div>
+
+        <!-- ========== ROW 5 ========== -->
+
+        <button id = "calculate" class="calculate-button">
+            <img src = "./assets/images/icon-calculator.svg" class = "calc-icon">  
+            <p>Calculate Repayment</p>
+        </button>
+        
+        
+      </section>
+      <section class="right rounded">
+        <!-- waiting -->
+         <div id = "waiting-container" class = "waiting-container">
+           <img src = "./assets/images/illustration-empty.svg" alt = "img-empty" class = "img-empty">
+            <p class="result title">Results shown here</p>
+            <p class="info header2">Complete the form and click "calculate
+              repayment" to see what your monthly repayments would be.
+            </p>
+         </div>
+      
+       <!-- filled --> 
+         <div id = "filled-container" class="filled-container">
+            <p class="result title">Your results</p>
+            <p class="info2 header2">Your results are shown below based on the 
+              information you provided. To adjust the results, edit the form and click
+              "calculate repayments" again. 
+            </p>
+            <div class="monthly-container">
+              <p class="header2">Your monthly repayments</p>
+              <p id = "monthlyval" class = "monthlyvalue">&pound;</p>
+              <div class="separator"></div>
+              <p class="info3 header2">Total you'll repay over the term</p>
+              <p id = "termval" class="termvalue">&pound;</p>
+            </div>
+         </div>
+      
+      </section>
+    </main>
+    
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+      Coded by <a href="#">Iván Fernández</a>.
+    </div>
+    <script src = "script.js"></script>
+  </body>
+</html>
