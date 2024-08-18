@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-    <link rel="stylesheet" href="./general.css">
-    <link rel="stylesheet" href="./left.css">
-    <link rel="stylesheet" href="./right.css">
+    <link rel="stylesheet" href="./style.css">
 
     <!-- Font Plus Jakarta Sans-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,7 +27,7 @@
         <!-- ========== ROW 1 ========== -->
         <div class="row-l1">
           <p class="title">Mortgage calculator</p>
-          <p id = "clearall" class="clearall header">Clear all</p>
+          <button id = "clearall" class="clearall header">Clear all</button>
         </div>
         <!-- ========== ROW 2 ========== -->
         <div class="row-l2">
@@ -77,14 +75,14 @@
             Mortgage Type
           </p>  
           <div class="type-container">
-            <button id = "repayment-button" class = "type-button input">
+            <div role = "button" id = "repayment-button" class = "type-button input">
               <input type = "radio" id = "repayment-check" class="type-input">
               <p class = "repayment">Repayment</p>
-            </button>
-            <button id = "interestonly-button" class = "type-button input">
+            </div>
+            <div role = "button" id = "interestonly-button" class = "type-button input">
               <input type = "radio" id = "interestonly-check" class="type-input">
               <p class = "interestonly">Interest Only</p>
-            </button>
+            </div>
           </div>
         </div>
 
@@ -100,7 +98,7 @@
       <section class="right rounded">
         <!-- waiting -->
          <div id = "waiting-container" class = "waiting-container">
-           <img src = "./assets/images/illustration-empty.svg" alt = "img-empty" class = "img-empty">
+           <img src = "./assets/images/illustration-empty.svg" alt = "" class = "img-empty">
             <p class="result title">Results shown here</p>
             <p class="info header2">Complete the form and click "calculate
               repayment" to see what your monthly repayments would be.
