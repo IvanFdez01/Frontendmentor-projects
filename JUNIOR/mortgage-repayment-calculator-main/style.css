@@ -184,6 +184,11 @@ body {
 
 /* ========= ROW 3 ========== */
 
+.amount-title, .term, .interest {
+    display: block;
+    cursor: pointer;
+}
+
 .row-l3 {
     margin-top: 1.6rem;
     display: grid;
