@@ -30,6 +30,7 @@ function onerror(inputs, n) {
     }
 }
 
+/*========== Main map ==========*/ 
 const inputs = new Map();
 
 /*========== Mortgage Amount ==========*/ 
