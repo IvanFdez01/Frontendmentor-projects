@@ -30,7 +30,6 @@ function onerror(inputs, n) {
     }
 }
 
-/*========== Main map ==========*/ 
 const inputs = new Map();
 
 /*========== Mortgage Amount ==========*/ 
@@ -128,7 +127,10 @@ calculate_button.addEventListener('click', function() {
     if (isN) {
         card1.classList.add('container-inactive');
         card2.classList.remove('container-inactive');
-        calculate_repayment(amount, term, interest);
+        if (repayment_check.checked)
+            calculate_repayment(amount, term, interest);
+        else 
+            calculate_interestonly(amount, term, interest);
     } else {
         alert('Select a Mortgage Type and ensure the fields are numeric.');
     }
@@ -145,19 +147,28 @@ function calculate_repayment(amount, term, interest) {
     updatehtml(document.getElementById('monthlyval'), monthly);
     updatehtml(document.getElementById('termval'), total);
 
-    function updatehtml(ref, val) {
-        let str = ref.textContent;
-        str = str.substring(1, str.length);
-        { 
-            // fixed: truncate decimals and returns string, 
-            // parseFloat: again to number
-            // toLocaleString: converts to ENG-System 
-            str += parseFloat(val.toFixed(2)).toLocaleString('en-US');
-        }
-        ref.textContent = str;
-    }
 }
 
 function calculate_interestonly(amount, term, interest) {
+    const interestrate = (interest / 100) / 12;
+    const npayments = term * 12;
+    const monthly = (amount * interestrate) / 12;
+    const total = monthly * npayments;
 
+    // change html elements
+    updatehtml(document.getElementById('monthlyval'), monthly);
+    updatehtml(document.getElementById('termval'), total);
+}
+
+function updatehtml(ref, val) {
+    let str = ref.textContent;
+    str = str.substring(0,1);
+    { 
+        // fixed: truncate decimals and returns string, 
+        // parseFloat: again to number
+        // toLocaleString: converts to ENG-System 
+        str += parseFloat(val.toFixed(2)).toLocaleString('en-US');
+        console.log(str);
+    }
+    ref.textContent = str;
 }
