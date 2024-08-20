@@ -193,7 +193,6 @@ label {
 
 @media (width > 400px) {
     .card {
-        margin-top: 5rem;
         width: 40rem;
         height: auto;
     }
