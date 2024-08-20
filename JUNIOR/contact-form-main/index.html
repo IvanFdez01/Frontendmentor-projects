@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css">
+
+  <!-- Font Karla -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Contact form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; margin-top: 2rem;}
+    .attribution a { color: hsl(169, 82%, 27%); }
+  </style>
+</head>
+<body>
+
+  <div role = "alert" id = "alert" class="alert">
+    <div class="alert-row1">
+      <img src="./assets/images/icon-success-check.svg" id="tick">
+      <h2 id="sent" class = "sent">Message sent!</h2>
+    </div>
+    <h2 id = "alert-row2" class="row2">
+      Thanks for completing the form, we'll be in touch soon!
+    </h2>
+  </div>
+
+  <main class = "card">
+    <h1> Contact Us</h1>
+    <section class="firstlastname-cont">
+      <!--First Name -->
+      <div class = "firstname-cont">
+        <label for = "fn-input" class="input-label">First Name</label>
+        <input type="text" id = "fn-input" class="fn-input input">
+        <p id = "err0" class="err"></p>
+      </div>
+      <!--Last Name -->
+      <div class = "lastname-cont">
+        <label for = "ln-input" class="input-label">Last Name</label>
+        <input type="text" id = "ln-input" class="ln-input input">
+        <p id = "err1" class="err"></p>
+      </div>
+    </section>
+    <!-- Email Address -->
+    <section class="email-cont">
+      <label for = "email-input" class="input-label">Email Address</label>
+      <input type="text" id = "email-input" class="email-input input">
+      <p id = "err2" class="err"></p>
+    </section>
+    <!-- Query Type -->
+    <section>
+      <h2 class="input-label">Query Type</h2>
+      <div class="query-cont">
+        <div id = "query-left-cont" class="query-left-cont">
+          <input type="radio" id = "query-left-radio" class="query-radio">
+          <label role = "button" for = "query-left-radio" class="query-info">
+            General Enquiry
+          </label>
+        </div>
+        <div id = "query-right-cont" class="query-right-cont">
+          <input type="radio" id = "query-right-radio" class="query-radio">
+          <label role = "button" for = "query-right-radio" class="query-info">
+            Support Request
+          </label>
+        </div>
+        <p id = "err3" class="err"></p>
+      </div>
+    </section>
+    <!-- Message -->
+    <section class="msg-cont">
+      <label for = "msg-input" class="input-label">Message</label>
+      <textarea id = "msg-input" class="msg-input input"></textarea>
+      <p id = "err4" class="err"></p>
+    </section>
+    <!-- Consent -->
+    <section class="consent-cont">
+      <div class="consent-input">
+        <input type = "checkbox" id = "consent-check" class = "consent-check">
+        <label for = "consent-check" class="input-label">I consent to being contacted by the team</label>
+      </div>
+      <p id = "err5" class="err"></p>
+    </section>
+    <!-- Submit -->
+     <button id = "submit-button" class="submit-button">Submit</button>
+  </main>
+  
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Iván Fernández</a>.
+  </footer>
+  <script src = "./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,208 @@
+
+/* ========== GENERAL ========== */
+
+:root {
+    --green-lighter: hsl(148, 38%, 91%);
+    --green-medium: hsl(169, 82%, 27%);
+    --green-darker: hsl(169, 82%, 20%);
+    --red-error: hsl(0, 66%, 54%);
+    --grey-medium: hsl(186, 15%, 59%);
+    --grey-darker: hsl(187, 24%, 22%);
+
+    --main-font: 'Karla';
+    --font-w-normal: 400;
+    --font-w-bold: 700;
+
+    --desktop-width: 1440px;
+    --mobile-width: 375px;
+}
+
+body {
+    background-color: var(--green-lighter);
+    font-family: var(--main-font);
+    height: 120vh;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+}
+
+/*reset*/
+p, h1, h2, button, input, label {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2, label {
+    font-size: 1rem;
+    font-weight: var(--font-w-normal);
+    color: var(--grey-darker);
+}
+
+textarea, input, button {
+    font-family: var(--main-font);
+}
+
+.card {
+    background-color: white;
+    box-shadow: 0 0 5rem rgba(0,0,0,0.1);
+    border-radius: 1rem;
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.input, .query-left-cont, .query-right-cont {
+    padding: 0.7rem;
+    border: 0.05rem solid var(--grey-medium);
+    border-radius: 0.3rem;
+}
+
+.input:hover, .query-left-cont:hover, .query-right-cont:hover {
+    border-color: var(--green-medium);
+}
+
+.input:focus {
+    outline: none;
+}
+
+.input-error {
+    border-color: var(--red-error);
+}
+
+label {
+    cursor: pointer;
+}
+
+/* ========== ERRORS ========== */
+.err {
+    color: var(--red-error);
+}
+
+/* ========== FIRST NAME ========== */
+/* ========== LAST NAME ========== */
+/* ========== EMAIL ADDRESS ========== */
+
+.firstlastname-cont, .query-cont {
+    margin-top: 0.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.firstname-cont, .lastname-cont, .email-cont, .msg-cont {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* ========== QUERY TYPE ========== */
+
+.query-left-cont, .query-right-cont {
+    cursor: pointer;
+    padding-left: 1.5rem;
+    display: flex;
+    gap: 0.6rem;
+}
+
+.query-radio {
+    accent-color: var(--green-medium);
+}
+
+.query-clicked {
+    border-color: var(--green-medium);
+    background-color: var(--green-lighter);
+}
+
+/* ========== MESSAGE ========== */
+
+.msg-input {
+    min-height: 4rem;
+    resize: vertical;
+}
+
+/* ========== CONSENT ========== */
+
+.consent-input {
+    margin: 0.5rem 0;
+    display: flex;
+    gap: 0.8rem;
+}
+
+.consent-check {
+    accent-color: var(--green-medium);
+}
+
+/* ========== SUBMIT ========== */
+
+.submit-button {
+    padding: 1rem;
+    font-weight: var(--font-w-bold);
+    color: white;
+    background-color: var(--green-medium);
+    border: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    transition: background-color 0.15s;
+}
+
+.submit-button:hover {
+    background-color: var(--green-darker);
+}
+
+/* ========== ALERT MSG ========== */
+
+.alert {
+    position: fixed;
+    top: 1rem;
+
+    display: fixed;
+    flex-direction: column;
+    gap: 0.8rem;
+
+    background-color: var(--grey-darker);
+    padding: 2rem;
+    border-radius: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.alert-visible {
+    opacity: 1;
+}
+
+.alert-row1 {
+    display: flex;
+    flex-direction: row;
+    gap: 0.6rem;
+}
+
+.sent {
+    color: white;
+}
+
+.row2 {
+    color: var(--grey-medium);
+}
+
+@media (width > 400px) {
+    .card {
+        margin-top: 5rem;
+        width: 40rem;
+        height: auto;
+    }
+}
+
+@media (width < 400px) {
+    .card {
+        
+    }
+}
+
+
