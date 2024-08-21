@@ -99,6 +99,7 @@ submit_b.addEventListener('click', function() {
             b = false;
             arr.push(2);
         }
+        if (inputs_map.get(2).value)
         // QUERY TYPE: one selected
         if (!lradio.checked && !rradio.checked) {
             b = false;

@@ -20,7 +20,7 @@
 body {
     background-color: var(--green-lighter);
     font-family: var(--main-font);
-    height: 120vh;
+    height: 120svh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -191,16 +191,32 @@ label {
     color: var(--grey-medium);
 }
 
-@media (width > 400px) {
+@media (width > 740px) {
     .card {
         width: 40rem;
         height: auto;
     }
 }
 
-@media (width < 400px) {
+@media (width < 740px) {
     .card {
-        
+        width: 85%;
+    }
+}
+
+@media (width < 500px) {
+    .card {
+        width: 80%;
+    }
+
+    .query-cont {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .firstlastname-cont {
+        display: flex;
+        flex-direction: column;
     }
 }
 
