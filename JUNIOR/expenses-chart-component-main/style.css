@@ -1,0 +1,297 @@
+
+:root {
+    --main-font: DM Sans;
+    --w-bold: 700;
+    --w-medium: 600;
+    --w-normal: 400;
+
+    --red-soft: hsl(10, 79%, 65%);
+    --red-soft-lighter: hsl(10, 79%, 75%);
+    --cyan: hsl(186, 34%, 60%);
+    --cyan-lighter: hsl(186, 34%, 75%);
+    --brown-dark: hsl(25, 47%, 15%);
+    --brown-medium: hsl(28, 10%, 53%);
+    --cream: hsl(27, 66%, 92%);
+    --orange-pale: hsl(33, 100%, 98%);
+
+    --blue-dark: hsl(205, 47%, 10%);
+    --blue-medium: hsl(205, 47%, 15%);
+    --blue-lighter: hsl(205, 47%, 26%);
+    --blue-aqua: hsl(190, 79%, 65%);
+    --yellow: hsl(65, 88%, 40%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: var(--main-font);
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.small-text {
+    font-size: 0.8rem;
+}
+
+.grey {
+    color: var(--brown-medium);
+}
+
+.white {
+    color: white;
+}
+
+
+/* ========== CARD ========== */
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* ============================ */
+/* ========== HEADER ========== */
+/* ============================ */
+
+
+section {
+    background-color: white;
+    border-radius: 1ch;
+}
+
+.header-cont {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+}
+
+.balance-cont {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.total-balance {
+    font-size: 1.5rem;
+    font-weight: var(--w-medium);
+}
+
+.mode {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -0.5rem;
+}
+
+#dark-mode-button {
+    position: relative;
+    width: 4.5rem;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+.circ {
+    position: absolute;
+    border-radius: 500px;
+    top: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    transition: left 0.25s ease-in-out, 
+    background-color 0.3s ease, border 0.3s;
+}
+
+/* ================================*/
+/* ========== DATA CHART ========== */
+/* ================================ */
+
+.chart-cont {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+.last-week {
+    font-size: 1.8rem;
+    font-weight: var(--w-bold);
+}
+
+.chart {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    align-items: end;
+    gap: 1rem;
+    height: 14rem; /*max bar on 10rem, arbitrary % */
+}
+
+.day-bar {
+    position: relative;
+}
+
+.bar {
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 0.5rem;
+    border: none;
+}
+
+.bar-hover {
+    opacity: 0.7;
+}
+
+.amount {
+    position: absolute;
+    top: -2.8rem;
+    left: -0.5rem;
+    right: -0.5rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: var(--w-medium);
+    padding: 0.5rem;
+    transition: opacity 0.15s;
+}
+
+.amount-invisible {
+    opacity: 0;
+}
+
+.amount-visible {
+    opacity: 1;
+}
+
+.amount:hover {
+    cursor: default;
+}
+
+.day-name {
+    text-align: center;
+}
+
+.month-cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.total-this {
+    font-size: 2rem;
+    font-weight: var(--w-medium);
+}
+
+.percentage {
+    font-weight: var(--w-medium);
+    text-align: right;
+}
+
+@media (width > 35rem){
+    .card {
+        width: 32rem;
+    }
+}
+
+@media (width < 35rem){
+    .card {
+        width: 90%;
+    }
+}
+
+/* ========== LIGHT MODE ========== */ 
+.body-light {
+    background-color: var(--cream);
+}
+
+.circumf-light {
+    background-color: transparent;
+    border: 3px solid white;
+    left: 0;
+}
+
+.circle-light {
+    background-color: var(--brown-dark);
+    border: 3px solid var(--brown-dark);
+    left: calc(100% - 2.5rem);;
+}
+
+.header-cont-light {
+    background-color: var(--red-soft);
+}
+
+.highlight1-light, .highlight2-light, .highlight3-light {
+    color: var(--brown-dark);
+}
+
+.val-light {
+    background-color: var(--red-soft);
+}
+
+.val-max-light {
+    background-color: var(--cyan);
+}
+
+.am-light {
+    color: white;
+    background-color: var(--brown-dark);
+}
+
+.sep-light {
+    border: 1px solid var(--cream);
+}
+
+/* ========== DARK MODE ========== */ 
+
+.body-dark {
+    background-color: var(--blue-medium);
+}
+
+.circumf-dark {
+    background-color: transparent;
+    border: 3px solid white;
+    left: calc(100% - 2.5rem);;
+}
+
+.circle-dark {
+    background-color: var(--red-soft);
+    border: 3px solid var(--red-soft);
+    left: 0;
+}
+
+.header-cont-dark {
+    background-color: var(--blue-lighter);
+}
+
+.chart-cont-dark {
+    background-color: var(--blue-dark);
+}
+
+.highlight1-dark, .highlight2-dark, .highlight3-dark {
+    color: white;
+}
+
+.val-dark {
+    background-color: var(--blue-lighter);
+}
+
+.val-max-dark {
+    background-color: var(--red-soft);
+}
+
+.am-dark {
+    color: var(--blue-dark);
+    background-color: white;
+}
+
+.sep-dark {
+    border: 1px solid var(--blue-medium);
+}
+

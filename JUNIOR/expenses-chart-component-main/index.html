@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css">
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | Expenses chart component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; font-family: DM Sans; }
+    .attribution a { color: hsl(10, 79%, 65%); }
+    .attr-light {color: black;}
+    .attr-dark {color: white;}
+  </style>
+</head>
+<body id = "body" class = "body-light">
+
+  <main class = "card">
+    <!-- Header -->
+    <section id = "header-cont" class="header-cont header-cont-light">
+      <div class="balance-cont">
+        <p class="small-text white">My balance</p>
+        <p class="total-balance white">&dollar;921.48</p>
+      </div>
+      <button id = "dark-mode-button">
+        <div id = "circle" class="circle-light circ"></div>
+        <div id = "circumf" class="circumf-light circ"></div>
+        <label for = "dark-mode-button" id = "mode" class="small-text white mode">light mode</label>
+      </button>
+    </section>
+    <!-- Chart with dynamic data (linked to data.json) -->
+    <section id = "chart-cont" class="chart-cont chart-cont-light">
+      <p id="highlight1" class = "last-week highlight-light">Spending - Last 7 days</p>
+      <div id = "chart" class="chart">
+        <data>
+          <div class = "day-bar">
+          <button id = "mon" class="val-light bar"></button>
+            <div id="amount-mon" class = "amount am-light amount-invisible"></div>
+          </div>
+          <div class="day-name grey small-text">mon</div>
+        </data>
+        <data>
+          <div class = "day-bar">
+            <button id = "tue" class="val-light bar"></button>
+            <div id="amount-tue" class = "amount am-light amount-invisible"></div>
+          </div>
+          <div class="day-name grey small-text">tue</div>
+        </data>
+        <data>
+          <div class = "day-bar">
+            <button id = "wed" class="val-light bar"></button>
+            <div id="amount-wed" class = "amount am-light amount-invisible"></div>
+          </div>
+          <div class="day-name grey small-text">wed</div>
+        </data>
+        <data>
+          <div class = "day-bar">
+            <button id = "thu" class="val-light bar"></button>
+            <div id="amount-thu" class = "amount am-light amount-invisible"></div>
+          </div>
+          <div class="day-name grey small-text">thu</div>
+        </data>
+        <data>
+          <div class = "day-bar">
+            <button id = "fri" class="val-light bar"></button>
+            <div id="amount-fri" class = "amount am-light amount-invisible"></div>
+          </div>
+          <div class="day-name grey small-text">fri</div>
+        </data>
+        <data>
+          <div class = "day-bar">
+            <button id = "sat" class="val-light bar"></button>
+            <div id="amount-sat" class = "amount am-light amount-invisible"></div>
+          </div>
+          <div class="day-name grey small-text">sat</div>
+        </data>
+        <data>
+          <div class = "day-bar">
+            <button id = "sun" class="val-light bar"></button>
+            <div id="amount-sun" class = "amount am-light amount-invisible"></div>
+          </div>
+          <div class="day-name grey small-text">sun</div>
+        </data>
+      </div>
+      <div id = "sep" class="sep-light"></div> <!--separator-->
+      <div class="month-cont">
+        <div class="this-month">
+          <p class="small-text grey">Total this week</p>
+          <p id = "highlight2" class="total-this highlight-light">&dollar;</p>
+        </div>
+        <div class="last-month">
+          <p id = "highlight3" class="percentage highlight-light">+2.4%</p>
+          <p class="small-text grey">from last week</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer id = "attr" class="attribution attr-light">
+    Challenge by <a  href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.frontendmentor.io/profile/IvanFdez01">Iván Fernández</a>.
+  </footer>
+  <script src = "script.js"></script>
+</body>
+</html>
