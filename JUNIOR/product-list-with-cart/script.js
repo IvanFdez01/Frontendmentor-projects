@@ -52,7 +52,7 @@ const CONFIRM_MODAL =
             <h1 class = "black">Order confirmed</h1>
             <h3 class = "grey medium">We hope you enjoy your food</h3>
         </div>
-        <div>
+        <div id = "confirmed-items-cont">
             <div id = "confirmed-items"></div>
             <div id = "confirmed-total">
                 <h3 class = "black medium">Order total</h3>
